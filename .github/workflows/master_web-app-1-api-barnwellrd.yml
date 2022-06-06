@@ -21,8 +21,10 @@ jobs:
         with:
           java-version: '17'
 
-      - name: Build with Maven
-        run: mvn clean install
+      - name: Gradle Build Action
+        # You may pin to the exact commit or the version.
+        # uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
+        uses: gradle/gradle-build-action@v2.1.7
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
